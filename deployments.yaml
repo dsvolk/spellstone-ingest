@@ -1,0 +1,21 @@
+deployments:
+  - name: stars
+    entrypoint: flows/stars.py:github_stars
+    work_pool:
+        name: default-work-pool
+        work_queue_name: default-queue
+
+  # - name: deployment-2
+  #   entrypoint: flows/goodbye.py:my_other_flow
+      # parameters:
+      #   number: 42,
+      #   message: Don't panic!
+  #   work_pool:
+  #       name: my-process-work-pool
+  #       work_queue_name: secondary-queue
+
+  # - name: deployment-3
+  #   entrypoint: flows/hello.py:yet_another_flow
+  #   work_pool:
+  #       name: my-docker-work-pool
+  #       work_queue_name: tertiary-queue
